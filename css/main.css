@@ -1,0 +1,90 @@
+/*WORKS ONLY IN CHROME, SAFARI, OPERA */
+/* FIRST EXAMPLE: background-clip: text*/
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:800);
+
+/*But we can use CSS gradients with the -webkit- prefix in order to remove
+ the background in non-Webkit browsers:*/
+
+.box-with-text {
+    background-image: -webkit-linear-gradient(transparent, transparent),
+    url(http://www.nature.org/cs/groups/webcontent/@photopublic/documents/media/bluebird-640x400-1.jpg);
+    -webkit-text-fill-color: transparent; /* s tem dolocimo, da je background-image polnilo*/
+    -webkit-background-clip: text;
+}
+
+.box-with-text{
+    position: absolute;
+    top:50%;
+    left:50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background-repeat: repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    white-space: nowrap;
+    text-align: center;
+    text-transform: uppercase;
+    font: 26vmax/.85 Open Sans, Impact;
+}
+
+body{
+    margin:0;
+}
+
+.first-container{
+    background: #000;
+    color: #FFF;
+    position: relative;
+    height: 400px;
+}
+
+
+/*SECOND TEXT - WORKS ONLY IN CHROME, SAFARI, OPERA*/
+/*animate the fill, CSS backgrounds don’t give us many possibilities. We can only*/
+
+.second-container{
+    margin-top: 5px;
+    background: #000;
+    color: #FFF;
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+}
+
+.box-with-text-2{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    font: bold 26vmax/.8 Open Sans, Impact;
+    white-space: nowrap;
+    text-align: center;
+    text-transform: uppercase;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.box-with-text-2{
+    background-image: -webkit-linear-gradient(green 50%, red 50%); /*kaksno je razmerje barv*/
+    background-repeat: repeat;
+    background-position: 0 0;
+    background-size: 100% 15px;         /*koliko px so debele crte*/
+    -webkit-text-fill-color: transparent;  /* s tem dolocimo, da so crte polnilo*/
+    -webkit-background-clip: text;          /* s tem dolocimo, da text zapolnimo*/
+    -webkit-animation: stripes 2s linear infinite;
+    animation: stripes 4s linear infinite;
+}
+
+@-webkit-keyframes stripes {
+    100%{
+        background-position: 0 -50%;
+    }
+}
+
+@keyframes stripes {
+    100%{
+        background-position: 0 -50%;
+    }
+}
