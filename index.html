@@ -7,15 +7,44 @@
 </head>
 <body>
 
-<div class="first-container">
+<div class="container">
     <div class="box-with-text">
         Text
     </div>
 </div>
-<div class="second-container">
+
+<div class="container">
     <div class="box-with-text-2">
         Love U
     </div>
+</div>
+
+<!-- SVG TEXT with FILL -->
+<div class="container">
+
+    <svg viewBox="0 0 600 300">
+
+        <!-- Gradient -->
+        <linearGradient id="gradient-one" x1="0" y1="0" x2="100%" y2="100%">
+            <stop stop-color="hsl(50, 100%, 70%)" offset="10%"></stop>
+            <stop stop-color="hsl(320, 100%, 50%)" offset="90%"></stop>
+        </linearGradient>
+
+
+
+        <!-- Text-->
+        <text text-anchor="middle"
+              x="50%"
+              y="50%"
+              dy=".35em"
+              class="text">
+            TEXT
+        </text>
+
+    </svg>
+
+
+
 </div>
 
 

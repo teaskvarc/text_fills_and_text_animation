@@ -29,22 +29,8 @@
     font: 26vmax/.85 Open Sans, Impact;
 }
 
-body{
-    margin:0;
-}
+.container{
 
-.first-container{
-    background: #000;
-    color: #FFF;
-    position: relative;
-    height: 400px;
-}
-
-
-/*SECOND TEXT - WORKS ONLY IN CHROME, SAFARI, OPERA*/
-/*animate the fill, CSS backgrounds don’t give us many possibilities. We can only*/
-
-.second-container{
     margin-top: 5px;
     background: #000;
     color: #FFF;
@@ -52,6 +38,12 @@ body{
     height: 400px;
     overflow: hidden;
 }
+
+
+
+
+/*SECOND TEXT - WORKS ONLY IN CHROME, SAFARI, OPERA*/
+/*animate the fill, CSS backgrounds don’t give us many possibilities. We can only*/
 
 .box-with-text-2{
     position: absolute;
@@ -86,5 +78,20 @@ body{
 @keyframes stripes {
     100%{
         background-position: 0 -50%;
+
     }
+}
+
+/* SVG TEXT*/
+
+.text{
+    font:12em/1 Open Sans, Impact;
+    text-transform: uppercase;
+    fill: url(#gradient-one);     /*in html make gradient, here you need URL and ID*/
+}
+
+svg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
 }
