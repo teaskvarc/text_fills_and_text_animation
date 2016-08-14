@@ -25,12 +25,10 @@
     <svg viewBox="0 0 600 300">
 
         <!-- Gradient -->
-        <linearGradient id="gradient-one" x1="0" y1="0" x2="100%" y2="100%">
-            <stop stop-color="hsl(50, 100%, 70%)" offset="10%"></stop>
-            <stop stop-color="hsl(320, 100%, 50%)" offset="90%"></stop>
+        <linearGradient id="gradient-one" x1="0" y1="0" x2="100%" y2="100%">  <!--x2 in y2 = 100% = angled -->
+            <stop stop-color="hsl(231, 100%, 70%)" offset="10%"></stop>   <!-- The ramp of colors to use on a gradient is defined by the ‘stop’ elements -->
+            <stop stop-color="hsl(111, 100%, 50%)" offset="90%"></stop>
         </linearGradient>
-
-
 
         <!-- Text-->
         <text text-anchor="middle"
@@ -40,9 +38,27 @@
               class="text">
             TEXT
         </text>
+    </svg>
+</div>
+
+
+<div class="container">
+    <svg height="300px" width="600px" fill="url(#gradient_colorful)">
+
+        <defs>
+            <linearGradient id="gradient_colorful" x2="0%" y2="100%" gradientUnits="userSpaceOnUse"> <!-- percentages represent values relative to the current viewport -->
+                <stop offset="20%" stop-color="#48afc1"></stop>
+                <stop offset="20%" stop-color="#b4c63b"></stop>
+                <stop offset="30%" stop-color="#1cb98f"></stop>
+                <stop offset="40%" stop-color="#ef5b2b"></stop>
+                <stop offset="50%" stop-color="#503969"></stop>
+                <stop offset="70%" stop-color="#ab6294"></stop>
+            </linearGradient>
+        </defs>
+        <text text-anchor="middle" x="50%" y="50%" class="text_2">Welcome</text>
+
 
     </svg>
-
 
 
 </div>
