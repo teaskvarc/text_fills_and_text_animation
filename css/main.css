@@ -2,6 +2,7 @@
 /* FIRST EXAMPLE: background-clip: text*/
 
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:800);
+@import url(https://fonts.googleapis.com/css?family=Indie+Flower);
 
 /*But we can use CSS gradients with the -webkit- prefix in order to remove
  the background in non-Webkit browsers:*/
@@ -37,6 +38,19 @@
     position: relative;
     height: 400px;
     overflow: hidden;
+
+}
+
+.container_animated{
+    position: relative;
+    height:400px;
+    overflow: hidden;
+    background: #222 -webkit-linear-gradient(0deg, #222 50%, #272727 50%);
+    background: #222 linear-gradient(90deg, #222 50%, #272727 50%);
+    background-size: 5em 100%;
+    margin-top: 5px;
+    text-transform: uppercase;
+
 }
 
 .container_white{
@@ -106,12 +120,13 @@
 
 #radial_text{
     text-transform: lowercase;
+    font:12em/1 Indie Flower, Impact;
 }
 
 /*to je za vse text-e, ki imajo markup <text> v svg*/
 text{
     text-transform: uppercase;
-    font:12em/1 Open Sans, Impact;;
+    font:12em/1 Open Sans, Impact;
 
 }
 
@@ -122,6 +137,3 @@ svg{
 
 }
 
-.icon{
-    margin-right: 40px;
-}

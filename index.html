@@ -136,7 +136,7 @@
 
 <!-- Text with Radial Gradient -->
 <div class="container">
-    <svg width="600px" height="200px" fill="url(#gradient_radial)">
+    <svg viewBox="0 0 600 400" fill="url(#gradient_radial)">
         <defs>
             <radialGradient id="gradient_radial" cy="60%" fx="45%" fy="45%" r="1">
                 <stop offset="0%" stop-color="#48afc1"></stop>
@@ -152,10 +152,26 @@
                 <stop offset="100%" stop-color="#ab6294"></stop>
             </radialGradient>
         </defs>
-        <text id="radial_text" x="30%" y="50%">Hippies</text>
+        <text id="radial_text" text-anchor="middle" x="50%" y="50%" dy=".35em">(S)posodi</text>
     </svg>
 </div>
 
+<!--Text with Animated gradient -->
+
+<div class="container_animated">
+    <svg viewBox="0 0 600 300" fill="url(#animated_gradient)">
+        <radialGradient id="animated_gradient" cx="50%" cy="50%" r="70%">
+            <!-- animation for radius of gradient-->
+            <animate attributeName="r" values="0%; 150%; 100%; 0%" dur="5s" repeatCount="indefinite"></animate>
+            <!-- animation for colors of stop-color -->
+            <stop stop-color="#123456" offset="0">
+                <animate attributeName="stop-color" values="#555;#123456;#123456;#555" dur="5s" repeatCount="indefinite"></animate>
+            </stop>
+            <stop stop-color="rgba(66,55,66,0)" offset="100%"></stop>
+        </radialGradient>
+        <text text-anchor="middle" x="50%" y="50%" dy=".35em">Hello</text>
+    </svg>
+</div>
 
 
 </body>
