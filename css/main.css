@@ -104,6 +104,10 @@
     fill: url(#gradient-one);     /*in html make gradient, here you need URL and ID*/
 }
 
+#radial_text{
+    text-transform: lowercase;
+}
+
 /*to je za vse text-e, ki imajo markup <text> v svg*/
 text{
     text-transform: uppercase;
