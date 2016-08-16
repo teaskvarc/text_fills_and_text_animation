@@ -299,6 +299,49 @@
     </svg>
 </div>
 
+<!-- SVG text with CLIP-PATH-->
+
+<div class="container_with_clip_path">
+
+    <svg viewBox="0 0 600 300">
+
+        <!-- symbol with text -->
+        <symbol id="s-text">
+            <text text-anchor="middle" x="50%" y="50%" dy=".35em" class="text--line">Lino</text>
+        </symbol>
+
+        <!-- Clippath with text -->
+        <clippath id="cp-text">
+            <text text-anchor="middle" x="50%" y="50%" dy=".35em" class="text--line">Lino</text>
+        </clippath>
+
+        <!-- Pattern -->
+        <pattern id="p-circles" width="40" height="40" viewBox="0 0 40 40" patternUnits="userSpaceOnUse">
+            <circle r="12" cx="20" cy="20" class="c-ring"></circle>
+            <circle r="5" cx="20" cy="20" class="c-ring"></circle>
+            <circle r="12" cx="0" cy="0" class="c-ring"></circle>
+            <circle r="12" cx="40" cy="0" class="c-ring"></circle>
+            <circle r="12" cx="40" cy="40" class="c-ring"></circle>
+            <circle r="12" cx="0" cy="40" class="c-ring"></circle>
+            <circle r="5" cx="0" cy="0" class="c-ring"></circle>
+            <circle r="5" cx="40" cy="0" class="c-ring"></circle>
+            <circle r="5" cx="40" cy="40" class="c-ring"></circle>
+            <circle r="5" cx="0" cy="40" class="c-ring"></circle>
+        </pattern>
+
+        <!-- Copy of text for shadow -->
+        <use xlink:href="#s-text" class="text-copy-shadow"></use>
+
+        <!-- Group with clippath and with patterned content -->
+        <g clip-path="url(#cp-text)">
+            <circle r="70%" cx="300" cy="150" class="shape-fill"></circle>
+        </g>
+
+        <!-- Copy of text for stroke -->
+        <use xlink:href="#s-text" class="text-copy-stroke"></use>
+
+    </svg>
+</div>
 
 
 

@@ -87,6 +87,16 @@
     background-size: 6em 100%;
 }
 
+.container_with_clip_path{
+    position: relative;
+    height: 400px;
+    margin-top: 5px;
+    overflow: hidden;
+    background: royalblue -webkit-radial-gradient(#4169e1, #0c1b4a);
+    background: royalblue radial-gradient(#4169e1, #0c1b4a);
+
+}
+
 
 
 /*SECOND TEXT - WORKS ONLY IN CHROME, SAFARI, OPERA*/
@@ -358,3 +368,29 @@ text{
     -webkit-animation-delay: -3.6s;
     animation-delay: -6.0s;
 }
+
+
+/* SVG TEXT with CLIP-PATH */
+
+.text-copy-stroke{
+    fill: tranparent;
+    stroke: white;
+    stroke-width: 4;
+}
+.text-copy-shadow{
+    fill: rgba(0, 0, 0, 0.25);
+    -webkit-transform: translate(0.06em, 0.06em);
+    -ms-transform: translate(0.06em, 0.06em);
+    transform: translate(0.06em, 0.06em);
+}
+
+.shape-fill{
+    fill: url(#p-circles);
+}
+
+.c-ring{
+    fill: none;
+    stroke-width: 2;
+    stroke: white;
+}
+
