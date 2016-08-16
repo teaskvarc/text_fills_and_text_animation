@@ -67,6 +67,16 @@
     background-size: 7em 100%;
 
 }
+.container_with_stars_pattern{
+    position: relative;
+    height: 400px;
+    margin-top: 5px;
+    overflow: hidden;
+    background: -webkit-linear-gradient(0deg,#280e39 50%, #220c31 50%);
+    background: #280e39 linear-gradient(90deg, #280e39 50%, #220c31 50%);
+    background-size: 3em 100%;
+
+}
 
 
 
@@ -166,4 +176,60 @@ text{
 
 /***********/
 
+/* TEXT WITH STARS*/
+.text_stars{
+    fill: url(#p_stars);
+    stroke: #551F7A;
+    stroke-width: 4;
+}
 
+/* Colorize and animate pattern*/
+
+.g-stars polygon{
+    stroke-width: 0;
+    -webkit-animation: stroke 2s infinite;
+    animation: stroke 2s infinite;
+}
+
+.g-stars polygon:nth-child(5n + 1){
+    fill: #551F7A;
+    stroke: #551F7A;
+    -webkit-animation-delay: -0.4s;
+    animation-delay: -0.4s;
+}
+.g-stars polygon:nth-child(5n + 2){
+    fill: #BA2799;
+    stoke: #BA2799;
+    -webkit-animation-delay: -0.8s;
+    animation-delay: -0.8s;
+}
+.g-stars polygon:nth-child(5n + 3){
+    fill:#D9587A;
+    stoke:#D9587A;
+    -webkit-animation-delay: -1.2s;
+    animation-delay: -1.2s;
+}
+.g-stars polygon:nth-child(5n + 4){
+    fill: #FFDD00;
+    stroke: #FFDD00;
+    -webkit-animation-delay: -1.6s;
+    animation-delay: -1.6s;
+}
+.g-stars polygon:nth-child(5n + 5) {
+    fill: #FFF3A1;
+    stroke: #FFF3A1;
+    -webkit-animation-delay: -2s;
+    animation-delay: -2s;
+}
+
+@-webkit-keyframes stroke {
+    50%{
+        stroke-width: 7;
+    }
+}
+
+@keyframes stroke {
+    50%{
+        stroke-width: 7;
+    }
+}
