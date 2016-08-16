@@ -77,6 +77,15 @@
     background-size: 3em 100%;
 
 }
+.container_with_animated_stroke{
+    position: relative;
+    height: 400px;
+    margin-top: 5px;
+    overflow: hidden;
+    background: -webkit-linear-gradient(0deg, #21060e 50%, #18040a 50%);
+    background: #21060e linear-gradient(90deg, #21060e 50%, #18040a 50%);
+    background-size: 6em 100%;
+}
 
 
 
@@ -232,4 +241,67 @@ text{
     50%{
         stroke-width: 7;
     }
+}
+
+/* TEXT WITH ANIMATED STROKE PATTERN */
+
+.text_animated_lines{
+    fill: none;
+    stroke: url(#p_animated_lines);
+    stroke-width: 8;
+    stroke-linejoin: round;
+}
+
+    /* Colorize & animate pattern*/
+
+@-webkit-keyframes stroke_2 {
+    50% {
+        stroke-width: 27;
+        stroke-opacity: .5;
+    }
+}
+@keyframes stroke_2 {
+    50%{
+        stroke-width: 27;
+        stroke-opacity: .5;
+    }
+}
+
+.g-animated-lines ellipse{
+    stroke-width: 0;
+    stroke-opacity: 1;
+    -webkit-animation: stroke 1.5s infinite;
+    animation: stroke_2 1.5s infinite;
+}
+.g-animated-lines ellipse:nth-child(5n + 1){
+    fill: #3F0B1B;
+    stroke: #3F0B1B;
+    -webkit-animation-delay: -0.3s;
+    animation-delay: -0.3s;
+
+}
+.g-animated-lines ellipse:nth-child(5n + 2){
+    fill: #7A1631;
+    stroke: #7A1631;
+    -webkit-animation-delay: -0.6s;
+    animation-delay: -0.6s;
+}
+
+.g-animated-lines ellipse:nth-child(5n + 3){
+    fill: #CF423C;
+    stroke: #CF423C;
+    -webkit-animation-delay: -0.9s;
+    animation-delay: -0.9s;
+}
+.g-animated-lines ellipse:nth-child(5n + 4){
+    fill: #FC7D49;
+    stroke: #FC7D49;
+    -webkit-animation-delay: -1.2s;
+    animation-delay: -1.2s;
+}
+.g-animated-lines ellipse:nth-child(5n + 5){
+    fill: #FFD462;
+    stroke: #FFD462;
+    -webkit-animation-delay: -1.5s;
+    animation-delay: -1.5s;
 }
