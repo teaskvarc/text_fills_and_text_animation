@@ -277,5 +277,34 @@
     </svg>
 </div>
 
+<!-- text with animated dashed stroke pattern -->
+
+    <!-- For this type of stroke we need to duplicate the text as many times as colors are used.
+        A better way to make this, is to use the symbol -->
+
+<div class="container">
+    <svg viewBox="0 0 1000 400">
+
+        <!-- Symbol -->
+        <symbol id="text_dashed_stroke">
+            <text text-anchor="middle" x="50%" y="50%" dy=".35em">(S)POSODI</text>
+        </symbol>
+
+        <!-- Duplicate symbols -->
+        <use xlink:href="#text_dashed_stroke" class="text-dashed"></use>
+        <use xlink:href="#text_dashed_stroke" class="text-dashed"></use>
+        <use xlink:href="#text_dashed_stroke" class="text-dashed"></use>
+        <use xlink:href="#text_dashed_stroke" class="text-dashed"></use>
+        <use xlink:href="#text_dashed_stroke" class="text-dashed"></use>
+    </svg>
+</div>
+
+
+
+
+
+
+
+
 </body>
 </html>
