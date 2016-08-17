@@ -41,7 +41,6 @@
 
     margin-top: 5px;
     margin-bottom: 5px;
-    text-align: center;
     background: #FFF;
     position: relative;
     height: 200px;
@@ -411,7 +410,7 @@ text{
 
 }
 
-svg
+
     .r-fill{
 
     fill: url(#p-circles-2);
@@ -457,3 +456,80 @@ svg
             transform: rotate(360deg);
         }
     }
+
+
+/* SVG text with animated shapes and clip-path  */
+
+.text--transparent{
+    fill:transparent;
+}
+
+.anim-shape{
+    -webkit-transform-origin: 0 150px;
+    -ms-transform-origin: 0 150px;
+    transform-origin: 0 150px;
+    -webkit-transform: scale(0,1) translate(0,0) ;
+    -ms-transform: scale(0,1) translate(0,0) ;
+    transform: scale(0,1) translate(0, 0);      /*skewing, rotating, translating, or scaling. translate(): moves an element sideways or up and down.*/
+    -webkit-animation: moving-panel 3s infinite alternate;
+    animation: moving-panel 3s infinite alternate;
+
+}
+
+@-webkit-keyframes moving-panel {
+    100%{
+        -webkit-transform: scale(1,1) translate(20px,0);
+        transform: scale(1,1) translate(20px,0);
+    }
+}
+
+@keyframes moving-panel {
+    100%{
+        -webkit-transform: scale(1,1) translate(20px,0);
+        transform: scale(1,1) translate(20px 0);
+    }
+}
+
+.colortext .anim-shape:nth-child(1){
+    fill:#0E1826;
+}
+.colortext .anim-shape:nth-child(2){
+    fill: #166973;
+}
+.colortext .anim-shape:nth-child(3){
+    fill: #65BFA6;
+}
+.colortext .anim-shape:nth-child(4){
+    fill: #F2CD5C;
+}
+.colortext .anim-shape:nth-child(5){
+    fill: #F26444;
+}
+
+.shadow{
+    -webkit-transform: translate(10px, 10px);
+    -ms-transform: translate(10px, 10px);
+    transform: translate(10px, 10px); /*method moves an element from its current position: X-axis,Y-axis */
+}
+.anim-shape--shadow{
+    fill: #000;
+    fill-opacity: .2;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

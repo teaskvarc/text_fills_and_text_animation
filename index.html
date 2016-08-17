@@ -284,6 +284,12 @@
     <!-- For this type of stroke we need to duplicate the text as many times as colors are used.
         A better way to make this, is to use the symbol -->
 
+    <!-- The symbol element is used to define graphical template objects which can be instantiated
+    by a <use> element.The use of symbol elements for graphics that are used multiple times in the
+    same document adds structure and semantics.
+      SYMBOL element itself is not rendered. Only instances of a symbol element
+       by a <use> element are rendered.-->
+
 <div class="container">
     <svg viewBox="0 0 1000 400">
 
@@ -478,6 +484,42 @@
 
     </svg>
 </div>
+
+<!-- GROUP OD ANIMATED SHAPES CLIPPED WITH CLIP-PATH -->
+<div class="container_white">
+    <svg viewBox="0 0 700 150">
+
+        <!-- Symbol with text-->
+        <symbol id="colorful-text">
+            <text text-anchor="middle" x="50%" y="50%" dy=".35em" class="colorful-text-line">hello</text>
+        </symbol>
+
+        <!-- Clippath with text -->
+        <clipPath id="cp-colorful-text">
+            <text text-anchor="middle" x="50%" y="50%" dy=".35em" class="colorful-text-line">hello</text>
+        </clipPath>
+
+        <!-- Group for shadow -->
+        <g clip-path="url(#cp-colorful-text)" class="shadow">
+            <rect height="100%" width="100%" class="anim-shape anim-shape--shadow"></rect>
+        </g>
+
+        <!-- Group with clippath for text -->
+        <g clip-path="url(#cp-colorful-text)" class="colortext">
+            <!-- Animated shapes inside text -->
+            <rect height="100%" width="100%" class="anim-shape"></rect>
+            <rect height="100%" width="80%" class="anim-shape"></rect>
+            <rect height="100%" width="60%" class="anim-shape"></rect>
+            <rect height="100%" width="40%" class="anim-shape"></rect>
+            <rect height="100%" width="20%" class="anim-shape"></rect>
+        </g>
+
+        <!-- Transparent copy of text to keep patterned text selectable-->
+        <use xlink:href="colorful-text" class="text--transparent"></use>
+
+    </svg>
+</div>
+
 
 </body>
 </html>
