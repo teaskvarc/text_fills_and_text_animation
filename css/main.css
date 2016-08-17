@@ -395,3 +395,65 @@ text{
     stroke: white;
 }
 
+/* SVG TEXT with CLIP-PATH and animated stroke */
+
+.text-copy--stroke-2{
+    fill: transparent;
+    stroke: green;
+    stroke-width: 3;
+}
+
+.text-copy--shadow-2{
+    fill: rgba(0, 0, 0, 0.25);
+    -webkit-transform: translate(0.06em, 0.06em);
+    -ms-transform: translate(0.06em, 0.06em);
+    transform: translate(0.06em, 0.06em);
+
+}
+
+svg
+    .r-fill{
+
+    fill: url(#p-circles-2);
+    -webkit-transform-origin: 300px 150px;
+    -ms-transform-origin: 300px 150px;
+    transform-origin: 300px 150px;
+    -webkit-animation: rotate_circle 30s infinite linear;
+    animation: rotate_circle 30s infinite linear;
+}
+    .c-ring-2{
+    fill:none;
+    stroke-width: 2;
+    stroke: white;
+}
+    .c-ring-2-fill{
+        fill: white;
+        stroke-width: 0;
+        stroke: wihite;
+        -webkit-animation: stroke_circle 5s infinite;
+        animation: stroke_circle 5s infinite;
+    }
+
+    @-webkit-keyframes stroke_circle {
+        50% {
+            stroke-width: 15;
+        }
+    }
+    @keyframes stroke_circle {
+        50%{
+            stroke-width: 15;
+        }
+    }
+
+    @-webkit-keyframes rotate_circle {
+        100%{
+            -webkit-transform: rotate(60deg);
+            transform: rotate(360deg);
+        }
+    }
+    @keyframes rotate_circle {
+        100%{
+            -webkit-transform: rotate(60deg);
+            transform: rotate(360deg);
+        }
+    }

@@ -175,7 +175,7 @@
 
 <!-- text with static pattern (dots) -->
 <div class="container_with_dots_pattern">
-    <svg viewBox="0 0 600 300">
+    <svg viewBox="0 0 1000 300">
         <!-- Pattern -->
         <pattern id="p_spots" viewBox="0 0 80 80" patternUnits="userSpaceOnUse" width="60" height="60" x="5" y="5">
             <g class="g-spots">
@@ -189,7 +189,9 @@
                 <circle r="9" cx="70" cy="70"></circle>
             </g>
         </pattern>
-        <text class="text_dots" text-anchor="middle" x="50%" y="50%" dy=".35em">SHARKY</text>
+
+            <text class="text_dots" text-anchor="middle" x="50%" y="50%" dy=".35em">SHARKY</text>
+
     </svg>
 </div>
 
@@ -405,11 +407,77 @@
     </svg>
 </div>
 
+<!-- SVG text with animated CLIP-PATH-->
+<div class="container_with_clip_path">
+    <svg viewBox="0 0 600 300">
 
+        <symbol id="s-text-2">
+            <text text-anchor="middle" x="50%" y="50%" dy=".35em" class="text--line-2">Text</text>
+        </symbol>
 
+        <clipPath id="cp-text-2">
+            <text text-anchor="middle" x="50%" y="50%" dy=".35em" class="text--line-2">Text</text>
+        </clipPath>
 
+        <pattern id="p-circles-2" width="40" height="40" viewBox="0 0 40 40" patternUnits="userSpaceOnUse">
+            <circle
+                    r="12" cx="20" cy="20"
+                    class="c-ring-2"
+            ></circle>
+            <circle
+                    r="5" cx="20" cy="20"
+                    class="c-ring-2 c-ring-2-fill"
+            ></circle>
 
+            <circle
+                    r="12" cx="0" cy="0"
+                    class="c-ring-2"
+            ></circle>
+            <circle
+                    r="12" cx="40" cy="0"
+                    class="c-ring-2"
+            ></circle>
+            <circle
+                    r="12" cx="40" cy="40"
+                    class="c-ring-2"
+            ></circle>
+            <circle
+                    r="12" cx="0" cy="40"
+                    class="c-ring-2"
+            ></circle>
 
+            <circle
+                    r="5" cx="0" cy="0"
+                    class="c-ring-2"
+            ></circle>
+            <circle
+                    r="5" cx="40" cy="0"
+                    class="c-ring-2"
+            ></circle>
+            <circle
+                    r="5" cx="40" cy="40"
+                    class="c-ring-2"
+            ></circle>
+            <circle
+                    r="5" cx="0" cy="40"
+                    class="c-ring-2"
+            ></circle>
+
+        </pattern>
+
+        <!-- copy of text for shadow -->
+        <use xlink:href="#s-text-2" class="text-copy--shadow-2"></use>
+
+        <!-- group with clippath and with patterned content -->
+        <g clip-path="url(#cp-text-2)">
+            <circle r="70%" cx="300" cy="150" class="r-fill"></circle>
+        </g>
+
+        <!-- copy of text for stroke  -->
+        <use xlink:href="#s-text-2" class="text-copy--stroke-2"></use>
+
+    </svg>
+</div>
 
 </body>
 </html>
