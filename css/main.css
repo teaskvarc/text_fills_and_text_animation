@@ -372,23 +372,24 @@ text{
 
 /* SVG TEXT with CLIP-PATH */
 
-.text-copy-stroke{
-    fill: tranparent;
+.text-copy--stroke {
+    fill: transparent;
     stroke: white;
     stroke-width: 4;
 }
-.text-copy-shadow{
+
+.text-copy--shadow {
     fill: rgba(0, 0, 0, 0.25);
     -webkit-transform: translate(0.06em, 0.06em);
     -ms-transform: translate(0.06em, 0.06em);
     transform: translate(0.06em, 0.06em);
 }
 
-.shape-fill{
+.shape-fill {
     fill: url(#p-circles);
 }
 
-.c-ring{
+.c-ring {
     fill: none;
     stroke-width: 2;
     stroke: white;
